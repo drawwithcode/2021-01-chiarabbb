@@ -78,5 +78,13 @@ function draw() {
 }
 
 function mouseClicked() {
+  if (song.isPlaying()) {
+    song.pause()
+  } else {
+    song.play()
+  }
+}
+
+function doubleClicked() {
   saveCanvas("flowfield", "png")
 }

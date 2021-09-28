@@ -17,7 +17,7 @@ function preload() {
 
 function setup() {
 
-
+  song.play()
   createCanvas(windowWidth, windowHeight);
 
 
@@ -54,7 +54,7 @@ function draw() {
     }
 
     stroke(myColor)
-    strokeWeight(15)
+    strokeWeight(12)
 
     for (var i = 0; i < points.length; i++) {
 
@@ -78,9 +78,5 @@ function draw() {
 }
 
 function mouseClicked() {
-  if (song.isPlaying()) {
-    song.pause()
-  } else {
-    song.play()
-  }
+  saveCanvas("flowfield", "png")
 }

@@ -77,14 +77,14 @@ function draw() {
   }
 }
 
+function doubleClicked() {
+  saveCanvas("flowfield", "png")
+}
+
 function mouseClicked() {
   if (song.isPlaying()) {
     song.pause()
   } else {
     song.play()
   }
-}
-
-function doubleClicked() {
-  saveCanvas("flowfield", "png")
 }
